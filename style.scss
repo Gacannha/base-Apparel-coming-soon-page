@@ -29,6 +29,7 @@ main {
     width: 70vw;
     align-self: center;
 
+
     display: grid;
     grid-template-columns: 1fr .4fr;
     grid-template-rows: 1fr;
@@ -39,11 +40,11 @@ main {
     .left {
         grid-area: 1 / 1 / 2 / 2;
 
-        background-image: url(/images/bg-pattern-desktop.svg);
+        background-image: url(/base-Apparel-coming-soon-page/images/bg-pattern-desktop.svg);
         padding: 5% 20% 0 15%;
 
         .logo {
-            margin-bottom: 10%;
+            margin-bottom: 20%;
         }
 
 
@@ -68,14 +69,140 @@ main {
             color: var(--primary-dRed);
 
         }
+
+        .email {
+            display: grid;
+            grid-template-columns: 1fr .5fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin-top: 4vh;
+
+            height: 6vh;
+            width: 25vw;
+            border-radius: 50px;
+            border: 1px solid var(--primary-dRed);
+            background-color: transparent;
+            padding: 0 0vw 0 2vw;
+
+            align-content: center;
+
+            input {
+                grid-area: 1 / 1 / 2 / 2;
+                background-color: transparent;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: var(--primary-dRed);
+                    opacity: 0.5;
+                    font-size: 1.1rem;
+                }
+            }
+
+            .container {
+                grid-area: 1 / 2 / 2 / 3;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .errorSign {
+                    margin: 0 10px 0 0;
+                    display: none;
+                }
+
+                button {
+                    background: linear-gradient(0.25turn, var(--primary-dRed), var(--primary-sRed));
+                    opacity: .8;
+                    border: none;
+                    border-radius: 50px;
+                    height: 6vh;
+                    width: 5vw;
+
+
+                    &:hover {
+                        scale: 110%;
+                        box-shadow: 1px 10px 50px var(--primary-dRed);
+                        background: linear-gradient(0.25turn, hsl(0, 49%, 86%), hsl(0, 89%, 83%));
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        #emailError {
+            margin: 1vh 0 0 2vw;
+            font-size: .9rem;
+            color: var(--primary-sRed);
+        }
     }
 
     .right {
         grid-area: 1 / 2 / 2 / 3;
-        width: auto;
+        width: 27vw;
+        background-image: url(/base-Apparel-coming-soon-page/images/hero-desktop.jpg);
+    }
+}
 
-        img {
-            width: 27vw;
+@media (max-width: 380px) {
+    body {
+        justify-content: normal;
+        margin: 0;
+        height: 115vh;
+
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        width: max-content;
+
+        .left {
+            background-image: none;
+            grid-area: 2 / 1 / 3 / 2;
+            padding: 7%;
+
+            .logo {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                scale: 70%;
+            }
+
+            .title {
+                text-align: center;
+            }
+
+            .mainText {
+                width: 100%;
+                text-align: center;
+            }
+
+            .email {
+                width: 100%;
+
+                .container {
+                    button {
+                        width: 15vw;
+                    }
+                }
+            }
+
+        }
+
+        .right {
+            grid-area: 1 / 1 / 2 / 2;
+            background-image: url(/base-Apparel-coming-soon-page/images/hero-mobile.jpg);
+            width: 100%;
+            height: 35vh;
         }
     }
 }

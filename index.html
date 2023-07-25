@@ -14,28 +14,15 @@
 
   <link rel="stylesheet" href="style.css">
 
+
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-  <div class="svg"><img src="/images/icon-arrow.svg" alt=""></div>
-
   <main>
-
     <div class="left">
-      <div class="logo"><img src="/images/logo.svg" alt=""></div>
+      <div class="logo"><img src="/base-Apparel-coming-soon-page/images/logo.svg" alt=""></div>
 
       <div class="title"> <span> WE'RE</span><br> COMING <br>SOON
       </div>
@@ -45,12 +32,22 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </div>
 
-      Email Address
+      <div class="email">
+        <input type="email" id="email" placeholder="Email Address" onkeyup="emailTest()" required>
+        <div class="container">
+          <div class="errorSign"><img src="/base-Apparel-coming-soon-page/images/icon-error.svg" alt=""></div>
+          <button id="email">
+            <img src="/base-Apparel-coming-soon-page/images/icon-arrow.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div id="emailError"></div>
+
     </div>
 
 
     <div class="right">
-      <img src="/images/hero-desktop.jpg" alt="">
     </div>
 
   </main>
@@ -61,6 +58,8 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script src="app.js"></script>
+
 </body>
 
 </html>
